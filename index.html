@@ -1,58 +1,384 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/NewProject/css/estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Willamine Neto | Portfólio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    :root
+    {
+      --neon-pink: #ff2fd7;
+      --neon-blue: #00e5ff;
+      --neon-green: #00ff9c;
+      --bg-dark: #0a0a0f;
+      --bg-card: #11111a;
+      --text-main: #eaeaff;
+    }
+
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html
+    {
+      scroll-behavior: smooth;
+    }
+
+    body
+    {
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(circle at top, #111122, var(--bg-dark));
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+
+    header
+    {
+      text-align: center;
+      padding: 5rem 1rem 3rem;
+    }
+
+    header h1
+    {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      color: var(--neon-blue);
+      text-shadow: 0 0 15px var(--neon-blue);
+      margin-bottom: 1rem;
+    }
+
+    header p
+    {
+      color: var(--neon-green);
+      font-size: 1.1rem;
+    }
+
+    section
+    {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    .card
+    {
+      background: linear-gradient(145deg, #0f0f1a, #151528);
+      border: 1px solid rgba(0, 229, 255, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+      transition: 0.3s;
+    }
+
+    .card:hover
+    {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+    }
+
+    h2
+    {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--neon-pink);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 6px var(--neon-pink);
+    }
+
+    p
+    {
+      line-height: 1.8;
+    }
+
+    .skills
+    {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill
+    {
+      border: 1px solid rgba(0, 255, 156, 0.3);
+      padding: 1rem;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.35);
+      transition: 0.3s;
+    }
+
+    .skill:hover
+    {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px var(--neon-green);
+    }
+
+    .skill h3
+    {
+      color: var(--neon-green);
+      margin-bottom: 0.8rem;
+    }
+
+    .projects
+    {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .project
+    {
+      border: 1px solid rgba(255, 47, 215, 0.3);
+      padding: 1rem;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.35);
+      transition: .3s;
+    }
+
+    .project:hover
+    {
+      box-shadow: 0 0 15px var(--neon-pink);
+      transform: translateY(-5px);
+    }
+
+    .project h3
+    {
+      color: var(--neon-blue);
+      margin-bottom: .8rem;
+    }
+
+    .contact
+    {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .contact a
+    {
+      flex: 1 1 200px;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      border: 1px solid rgba(255, 47, 215, 0.4);
+      background: rgba(0, 0, 0, 0.5);
+      transition: all .3s ease;
+    }
+
+    .contact a:hover
+    {
+      color: #000;
+      background: var(--neon-pink);
+      box-shadow: 0 0 20px var(--neon-pink);
+    }
+
+    footer
+    {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+      font-size: .9rem;
+    }
+
+    footer span
+    {
+      color: var(--neon-blue);
+    }
+  </style>
 </head>
+
 <body>
 
-    <h1>Lorem</h1>
+  <header>
+    <h1>Willamine Neto</h1>
     <p>
-        ipsum dlior sit amet consectetur adipisicing elit. Sequi facilis maiores rem odio fuga dicta nam laboriosam, harum ipsa impedit dlioribus quibusdam autem assumenda repellendus ullam, illo, reprehenderit vel quo?
+      Software Engineering • Software Architecture • System Design • Backend Development
     </p>
+  </header>
 
-    <p>Testando minhas habilidades!</p>
+  <section>
 
-    <hr>
+    <div class="card">
+      <h2>🧠 Sobre Mim</h2>
 
-    <div id="primeiradiv">
-        <h3>
-            Lorem, ipsum dlior sit amet consectetur adipisicing elit. 
-            Earum accusantium rem vliuptatem tenetur deleniti animi vitae nobis, 
-            unde quam exercitationem mliestiae ducimus eos ad odio, 
-            nemo eveniet in, quos minima.
-        </h3>
+      <p>
+        Graduando em <strong>Engenharia de Software</strong>,
+        com foco em <strong>Arquitetura de Software</strong>,
+        <strong>System Design</strong>,
+        modelagem de sistemas e desenvolvimento back-end.
+
+        Possuo experiência com Java, Python e bancos de dados,
+        participando da análise, modelagem e construção de aplicações
+        orientadas a boas práticas de engenharia de software.
+
+        Tenho interesse especial por padrões arquiteturais,
+        Domain Driven Design (DDD),
+        Clean Architecture,
+        modelagem UML e desenvolvimento de sistemas escaláveis e de fácil manutenção.
+      </p>
     </div>
 
-    <a href="/NewProject/sobre.html">Sobre</a>
-    <table>
-        <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>peso</th>
-        </tr>
+    <div class="card">
+      <h2>⚡ Habilidades</h2>
 
-        <tr>
-            <td>Willamine</td>
-            <td>25</td>
-            <td>70 KG</td>
-        </tr>
-    </table>
-    <div>
-        <h2>Lista de um site</h2>
-        <ul>
-            <li>produto um </li>
-            <li>produto dois </li>
-            <li>produto tres</li>
-        </ul>
-        <hr>
-        <ol>
-            <li>produto</li>
-            <li>produto</li>
-            <li>produto</li>
-        </ol>
-    </div>    
+      <div class="skills">
+
+        <div class="skill">
+          <h3>Engenharia de Software</h3>
+          <p>
+            Análise de requisitos, documentação técnica,
+            modelagem de sistemas e boas práticas de desenvolvimento.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>Arquitetura de Software</h3>
+          <p>
+            Clean Architecture,
+            DDD,
+            separação de responsabilidades
+            e design de sistemas escaláveis.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>System Design</h3>
+          <p>
+            Modelagem de componentes,
+            comunicação entre serviços,
+            persistência de dados e escalabilidade.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>Modelagem UML</h3>
+          <p>
+            Casos de uso,
+            diagramas de classe,
+            diagramas de sequência,
+            atividades e documentação visual.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>Java</h3>
+          <p>
+            Programação orientada a objetos,
+            APIs REST,
+            Spring Boot,
+            padrões de projeto e boas práticas.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>Python</h3>
+          <p>
+            Desenvolvimento de aplicações,
+            integração entre sistemas
+            e prototipação de soluções.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>Banco de Dados</h3>
+          <p>
+            PostgreSQL,
+            MySQL,
+            modelagem relacional,
+            SQL e normalização.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>Design Patterns</h3>
+          <p>
+            SOLID,
+            Repository Pattern,
+            Factory,
+            Strategy e padrões arquiteturais.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Projetos</h2>
+
+      <div class="projects">
+
+        <div class="project">
+          <h3>Sistema de Gestão Empresarial</h3>
+          <p>
+            Modelagem UML, banco de dados relacional,
+            regras de negócio e arquitetura em camadas.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>API REST</h3>
+          <p>
+            Desenvolvimento de serviços RESTful utilizando Java,
+            autenticação, persistência e boas práticas arquiteturais.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Modelagem de Sistemas</h3>
+          <p>
+            Construção de diagramas UML,
+            documentação técnica e especificação de requisitos.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Arquitetura de Software</h3>
+          <p>
+            Estudos e implementações baseadas em DDD,
+            Clean Architecture e Design Patterns.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📡 Contato</h2>
+
+      <div class="contact">
+        <a href="https://instagram.com/willamineneto/" target="_blank">
+          Instagram
+        </a>
+
+        <a href="https://wa.me/5591984743351" target="_blank">
+          WhatsApp
+        </a>
+
+        <a href="https://t.me/willamine" target="_blank">
+          Telegram
+        </a>
+
+        <a href="mailto:willamine82@gmail.com">
+          E-mail
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>
+      © 2026 <span>Willamine Neto</span> • Software Engineer
+    </p>
+  </footer>
+
 </body>
 </html>
