@@ -7,192 +7,8 @@
   <title>Willamine Neto | Portfólio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/global.css" />
 
-  <style>
-    :root
-    {
-      --neon-pink: #ff2fd7;
-      --neon-blue: #00e5ff;
-      --neon-green: #00ff9c;
-      --bg-dark: #0a0a0f;
-      --bg-card: #11111a;
-      --text-main: #eaeaff;
-    }
-
-    *
-    {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html
-    {
-      scroll-behavior: smooth;
-    }
-
-    body
-    {
-      font-family: 'Share Tech Mono', monospace;
-      background: radial-gradient(circle at top, #111122, var(--bg-dark));
-      color: var(--text-main);
-      min-height: 100vh;
-    }
-
-    header
-    {
-      text-align: center;
-      padding: 5rem 1rem 3rem;
-    }
-
-    header h1
-    {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3.5rem;
-      color: var(--neon-blue);
-      text-shadow: 0 0 15px var(--neon-blue);
-      margin-bottom: 1rem;
-    }
-
-    header p
-    {
-      color: var(--neon-green);
-      font-size: 1.1rem;
-    }
-
-    section
-    {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-
-    .card
-    {
-      background: linear-gradient(145deg, #0f0f1a, #151528);
-      border: 1px solid rgba(0, 229, 255, 0.2);
-      border-radius: 16px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
-      transition: 0.3s;
-    }
-
-    .card:hover
-    {
-      transform: translateY(-3px);
-      box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
-    }
-
-    h2
-    {
-      font-family: 'Orbitron', sans-serif;
-      color: var(--neon-pink);
-      margin-bottom: 1.5rem;
-      text-shadow: 0 0 6px var(--neon-pink);
-    }
-
-    p
-    {
-      line-height: 1.8;
-    }
-
-    .skills
-    {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-
-    .skill
-    {
-      border: 1px solid rgba(0, 255, 156, 0.3);
-      padding: 1rem;
-      border-radius: 12px;
-      background: rgba(0, 0, 0, 0.35);
-      transition: 0.3s;
-    }
-
-    .skill:hover
-    {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px var(--neon-green);
-    }
-
-    .skill h3
-    {
-      color: var(--neon-green);
-      margin-bottom: 0.8rem;
-    }
-
-    .projects
-    {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-
-    .project
-    {
-      border: 1px solid rgba(255, 47, 215, 0.3);
-      padding: 1rem;
-      border-radius: 12px;
-      background: rgba(0,0,0,0.35);
-      transition: .3s;
-    }
-
-    .project:hover
-    {
-      box-shadow: 0 0 15px var(--neon-pink);
-      transform: translateY(-5px);
-    }
-
-    .project h3
-    {
-      color: var(--neon-blue);
-      margin-bottom: .8rem;
-    }
-
-    .contact
-    {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .contact a
-    {
-      flex: 1 1 200px;
-      text-align: center;
-      padding: 1rem;
-      border-radius: 12px;
-      text-decoration: none;
-      color: var(--text-main);
-      border: 1px solid rgba(255, 47, 215, 0.4);
-      background: rgba(0, 0, 0, 0.5);
-      transition: all .3s ease;
-    }
-
-    .contact a:hover
-    {
-      color: #000;
-      background: var(--neon-pink);
-      box-shadow: 0 0 20px var(--neon-pink);
-    }
-
-    footer
-    {
-      text-align: center;
-      padding: 2rem;
-      color: #888;
-      font-size: .9rem;
-    }
-
-    footer span
-    {
-      color: var(--neon-blue);
-    }
-  </style>
 </head>
 
 <body>
@@ -231,72 +47,96 @@
 
       <div class="skills">
 
-        <div class="skill">
+        <div class="skill"> <!--Titulo inicial--->
           <h3>Engenharia de Software</h3>
           <p>
             Análise de requisitos, documentação técnica,
             modelagem de sistemas e boas práticas de desenvolvimento.
           </p>
         </div>
+        
+        <a class="skill-link" href="/pages/architecture/architecture.html">
+          <div class="skill">
+            <h3>Arquitetura de Software</h3>
+            <p>
+              Clean Architecture,
+              DDD,
+              separação de responsabilidades
+              e design de sistemas escaláveis.
+            </p>
+          </div>
+        </a>
 
-        <div class="skill">
-          <h3>Arquitetura de Software</h3>
-          <p>
-            Clean Architecture,
-            DDD,
-            separação de responsabilidades
-            e design de sistemas escaláveis.
-          </p>
-        </div>
+        <a class="skill-link" href="/pages/system-design/system-design.html">
+          <div class="skill">
+            <h3>System Design</h3>
+            <p>
+              Modelagem de componentes,
+              comunicação entre serviços,
+              persistência de dados e escalabilidade.
+            </p>
+          </div>
+        </a>
 
-        <div class="skill">
-          <h3>System Design</h3>
-          <p>
-            Modelagem de componentes,
-            comunicação entre serviços,
-            persistência de dados e escalabilidade.
-          </p>
-        </div>
+        <a class="skill-link" href="/pages/uml/uml.html">
+          <div class="skill">
+            <h3>Modelagem UML</h3>
+            <p>
+              Casos de uso,
+              diagramas de classe,
+              diagramas de sequência,
+              atividades e documentação visual.
+            </p>
+          </div>
+        </a>
 
-        <div class="skill">
-          <h3>Modelagem UML</h3>
-          <p>
-            Casos de uso,
-            diagramas de classe,
-            diagramas de sequência,
-            atividades e documentação visual.
-          </p>
-        </div>
+        <a class="skill-link" href="/pages/java/java.html">
+          <div class="skill">
+            <h3>Java</h3>
+            <p>
+              Programação orientada a objetos,
+              APIs REST,
+              Spring Boot,
+              padrões de projeto e boas práticas.
+            </p>
+          </div>
+        </a>
+        
+        <a class="skill-link" href="/pages/python/python.html">
+          <div class="skill">
+            <h3>Python</h3>
+            <p>
+              Desenvolvimento de aplicações,
+              integração entre sistemas
+              e prototipação de soluções.
+            </p>
+          </div>
+        </a>
 
-        <div class="skill">
-          <h3>Java</h3>
-          <p>
-            Programação orientada a objetos,
-            APIs REST,
-            Spring Boot,
-            padrões de projeto e boas práticas.
-          </p>
-        </div>
+        <a class="skill-link" href="/pages/devops/devops.html">
+          <div class="skill">
+            <h3>DevOps</h3>
+            <p>
+              Docker,
+              Git,
+              integração contínua e práticas de desenvolvimento ágil.
+            </p>
+          </div>
+        </a>  
 
-        <div class="skill">
-          <h3>Python</h3>
-          <p>
-            Desenvolvimento de aplicações,
-            integração entre sistemas
-            e prototipação de soluções.
-          </p>
-        </div>
+        <a class="skill-link" href="/pages/databases/databases.html">
+          <div class="skill">
+            <h3>Banco de Dados</h3>
+            <p>
+              PostgreSQL,
+              MySQL,
+              modelagem relacional,
+              SQL e normalização.
+            </p>
+          </div>
+        </a>
 
-        <div class="skill">
-          <h3>Banco de Dados</h3>
-          <p>
-            PostgreSQL,
-            MySQL,
-            modelagem relacional,
-            SQL e normalização.
-          </p>
-        </div>
-
+        <a class="skill-link" href="/pages/design-patterns/design-patterns.html">
         <div class="skill">
           <h3>Design Patterns</h3>
           <p>
@@ -306,8 +146,10 @@
             Strategy e padrões arquiteturais.
           </p>
         </div>
+        </a>
 
       </div>
+
     </div>
 
     <div class="card">
