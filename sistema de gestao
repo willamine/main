@@ -1,0 +1,54 @@
+sistema de gestao pedidos
+
+[ Cliente envia mensagem ]
+         │
+         ▼
+[ Bot responde com Saudação + Opções ]
+         │
+         ▼
+[ Bot envia Link do Cardápio/Catálogo ]
+         │
+         ▼
+[ Cliente escolhe os itens no Frontend (HTML/JS) ]
+         │
+         ▼
+[ Cliente finaliza e o Bot pergunta: ]
+ ├─► Opção A: "Vou buscar" ──► Valor total = Itens ──► Gerar Resumo do Pedido
+ │
+ └─► Opção B: "Entregar em casa"
+              │
+              ▼
+       [ Solicitar Endereço ]
+              │
+              ▼
+       [ Valor total = Itens + R$ 7,00 ]
+              │
+              ▼
+       [ Gerar Resumo do Pedido ]
+         │
+         ▼
+[ Registrar Pedido no Banco de Dados (Spring Boot) ]
+         │
+         ▼
+[ Enviar Confirmação final para o Cliente ]
+
+
+
+┌─────────────────────────────────┐          ┌────────────────────────────────┐
+│             Pedido              │          │           ItemPedido           │
+├─────────────────────────────────┤          ├────────────────────────────────┤
+│ - id: Long                      │1        *│ - id: Long                     │
+│ - clienteNome: String           ├─────────►│ - quantidade: Integer          │
+│ - clienteTelefone: String       │          │ - precoUnitario: BigDecimal    │
+│ - tipoEntrega: TipoEntrega(Enum)│          └───────────────┬────────────────┘
+│ - enderecoEntrega: String       │                          │ *
+│ - taxaEntrega: BigDecimal       │                          │
+│ - valorTotal: BigDecimal        │                          ▼ 1
+│ - status: StatusPedido(Enum)    │          ┌────────────────────────────────┐
+└─────────────────────────────────┘          │            Produto             │
+                                             ├────────────────────────────────┤
+                                             │ - id: Long                     │
+                                             │ - nome: String                 │
+                                             │ - precoBase: BigDecimal        │
+                                             └────────────────────────────────┘
+

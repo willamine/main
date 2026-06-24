@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Java Architecture</title>
+
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+mermaid.initialize({
+    startOnLoad: true,
+    theme: "dark"
+});
+</script>
+
+<style>
+
+body{
+    background:#070812;
+    color:#fff;
+    font-family:Consolas, monospace;
+    padding:40px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    color:#00ff88;
+    margin-bottom:50px;
+}
+
+.card{
+    border:1px solid #00ff88;
+    border-radius:16px;
+    padding:30px;
+    margin-bottom:40px;
+    box-shadow:0 0 20px rgba(0,255,136,.15);
+}
+
+.card h2{
+    color:#00ff88;
+    margin-bottom:20px;
+}
+
+</style>
+
+</head>
+<body>
+    <div style="color: #ff00b3;"><a href="/index.html" >Voltar para o Portfólio</a></div>
+    <div class="container">
+
+        <h1 class="title">JAVA ENGINEERING</h1>
+
+        <div class="card">
+
+            <h2>Arquitetura Spring Boot</h2>
+
+            <pre class="mermaid">
+            flowchart TD
+
+            A[Frontend]
+            --> B[REST Controller]
+
+            B --> C[Service Layer]
+
+            C --> D[Repository]
+
+            D --> E[(PostgreSQL)]
+
+            </pre>
+
+        </div>
+
+        <div class="card">
+
+            <h2>UML - API REST</h2>
+
+            <pre class="mermaid">
+
+                classDiagram
+
+                class UserController{
+                +listar()
+                +buscar()
+                +salvar()
+                }
+
+                class UserService{
+                +listar()
+                +buscar()
+                +salvar()
+                }
+
+                class UserRepository{
+                +findAll()
+                +findById()
+                +save()
+                }
+
+                class User{
+                +Long id
+                +String nome
+                +String email
+                }
+
+                UserController --> UserService
+                UserService --> UserRepository
+                UserRepository --> User
+
+            </pre>
+
+        </div>
+
+        <div class="card">
+
+            <h2>BPMN - Cadastro de Usuário</h2>
+
+            <pre class="mermaid">
+
+                flowchart TD
+
+                A([Início])
+                --> B[Receber Dados]
+
+                B --> C[Validar Dados]
+
+                C --> D{Dados válidos?}
+
+                D -->|Sim| E[Salvar Usuário]
+
+                E --> F([Fim])
+
+                D -->|Não| G[Retornar Erro]
+
+                G --> F
+
+            </pre>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Mapa de Conhecimento</h2>
+
+            <pre class="mermaid">
+
+            mindmap
+            root((Java))
+
+                POO
+                    Encapsulamento
+                    Herança
+                    Polimorfismo
+                    Abstração
+
+                Spring Boot
+                    REST
+                    Security
+                    JPA
+                    Validation
+
+                Arquitetura
+                    SOLID
+                    MVC
+                    Clean Architecture
+                    Design Patterns
+
+                Banco de Dados
+                    PostgreSQL
+                    MySQL
+                    Hibernate
+
+                DevOps
+                    Docker
+                    Git
+                    Linux
+
+            </pre>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
